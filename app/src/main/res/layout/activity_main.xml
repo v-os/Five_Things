@@ -48,6 +48,6 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="44dp"
         android:onClick="showResonant"
-        android:text="@string/current_divider" />
+        android:text="@string/resonant_circuit" />
 
 </LinearLayout>

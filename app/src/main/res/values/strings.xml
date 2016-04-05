@@ -15,8 +15,9 @@
     <string name="current_divider_description"><b>Current divider</b> is a simple linear circuit that produces an output current (IX) that is a fraction of its input current (IT). Current division refers to the splitting of current between the branches of the divider. The currents in the various branches of such a circuit will always divide in such a way as to minimize the total energy expended.</string>
 
     <string name="resonant_circuit">Resonant circuit</string>
-    <string name="resonant_circuit_description">An LC circuit, also called a resonant circuit, tank circuit, or tuned circuit, is an electric circuit consisting of an inductor, represented by the letter L, and a capacitor, represented by the letter C, connected together. The circuit can act as an electrical resonator, an electrical analogue of a tuning fork, storing energy oscillating at the circuit's resonant frequency.
+    <string name="resonant_circuit_description">An <b>LC circuit</b>, also called a <b>resonant circuit</b>, tank circuit, or tuned circuit, is an electric circuit consisting of an inductor, represented by the letter L, and a capacitor, represented by the letter C, connected together. The circuit can act as an electrical resonator, an electrical analogue of a tuning fork, storing energy oscillating at the circuit\'s resonant frequency.
 
-LC circuits are used either for generating signals at a particular frequency, or picking out a signal at a particular frequency from a more complex signal. They are key components in many electronic devices, particularly radio equipment, used in circuits such as oscillators, filters, tuners and frequency mixers.</string>
+\nLC circuits are used either for generating signals at a particular frequency, or picking out a signal at a particular frequency from a more complex signal. They are key components in many electronic devices, particularly radio equipment, used in circuits such as oscillators, filters, tuners and frequency mixers.
+    </string>
 
 </resources>
