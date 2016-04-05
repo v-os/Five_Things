@@ -34,7 +34,9 @@
             &lt;!&ndash;portrait&ndash;&gt;
             -->
         </activity>
-        <activity android:name=".VoltageDivider"></activity>
+        <activity android:name=".VoltageDivider" />
+        <activity android:name=".CurrentDivider" />
+        <activity android:name=".ResonantCircuit"></activity>
     </application>
 
 </manifest>

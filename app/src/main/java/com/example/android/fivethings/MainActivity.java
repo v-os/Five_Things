@@ -24,5 +24,14 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
+    public void showCurrentDivider(View view) {
+        Intent intent = new Intent(this, CurrentDivider.class);
+        startActivity(intent);
 
+    }
+    public void showResonant(View view) {
+        Intent intent = new Intent(this, ResonantCircuit.class);
+        startActivity(intent);
+
+    }
 }
