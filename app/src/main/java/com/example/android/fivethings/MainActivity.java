@@ -19,4 +19,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void showVoltageDivider(View view) {
+        Intent intent = new Intent(this, VoltageDivider.class);
+        startActivity(intent);
+
+    }
+
 }
