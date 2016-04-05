@@ -49,5 +49,12 @@
         android:layout_marginTop="44dp"
         android:onClick="showResonant"
         android:text="@string/resonant_circuit" />
-
+    <Button
+        android:id="@+id/codes_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="44dp"
+        android:onClick="showColorCodes"
+        android:text="@string/electronic_color_code" />
 </LinearLayout>

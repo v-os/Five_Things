@@ -34,4 +34,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
+    public void showColorCodes(View view) {
+        Intent intent = new Intent(this, ColorCode.class);
+        startActivity(intent);
+
+    }
 }

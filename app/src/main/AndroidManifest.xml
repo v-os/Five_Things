@@ -36,7 +36,8 @@
         </activity>
         <activity android:name=".VoltageDivider" />
         <activity android:name=".CurrentDivider" />
-        <activity android:name=".ResonantCircuit"></activity>
+        <activity android:name=".ResonantCircuit" />
+        <activity android:name=".ColorCode"></activity>
     </application>
 
 </manifest>

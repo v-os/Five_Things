@@ -16,8 +16,12 @@
 
     <string name="resonant_circuit">Resonant circuit</string>
     <string name="resonant_circuit_description">An <b>LC circuit</b>, also called a <b>resonant circuit</b>, tank circuit, or tuned circuit, is an electric circuit consisting of an inductor, represented by the letter L, and a capacitor, represented by the letter C, connected together. The circuit can act as an electrical resonator, an electrical analogue of a tuning fork, storing energy oscillating at the circuit\'s resonant frequency.
+        \nLC circuits are used either for generating signals at a particular frequency, or picking out a signal at a particular frequency from a more complex signal. They are key components in many electronic devices, particularly radio equipment, used in circuits such as oscillators, filters, tuners and frequency mixers.
+    </string>
 
-\nLC circuits are used either for generating signals at a particular frequency, or picking out a signal at a particular frequency from a more complex signal. They are key components in many electronic devices, particularly radio equipment, used in circuits such as oscillators, filters, tuners and frequency mixers.
+    <string name="electronic_color_code">Electronic color code</string>
+    <string name="electronic_color_code_description">The electronic color code is used to indicate the values or ratings of electronic components, usually for resistors, but also for capacitors, inductors, and others. A separate code, the 25-pair color code, is used to identify wires in some telecommunications cables.
+        \nThe electronic color code was developed in the early 1920s by the Radio Manufacturers Association (now part of Electronic Industries Alliance (EIA)), and was published as EIA-RS-279. The current international standard is IEC 60062. published by International Electrotechnical Commission.
     </string>
 
 </resources>
