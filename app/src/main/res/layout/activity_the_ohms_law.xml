@@ -2,10 +2,10 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
 
-    tools:context="com.example.android.fivethings.TheOhmsLaw"
-
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+
+    android:layout_height="wrap_content"
+    tools:context="com.example.android.fivethings.TheOhmsLaw">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -15,8 +15,8 @@
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/ohmlaw"
             android:adjustViewBounds="true"
+            android:src="@drawable/ohmlaw"
             />
 
         <TextView
@@ -25,9 +25,71 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/imageView"
             android:layout_margin="8dp"
-            android:textSize="16sp"
+            android:autoLink="web"
             android:text="@string/ohm_law_description"
-            android:autoLink="web" />
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editText"
+            style="@style/InputFields"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="223dp"
+            android:layout_toRightOf="@+id/textView2"
+            android:ems="10"
+            android:hint="Voltage"
+            android:inputType="numberDecimal"
+            android:text="1"
+            android:numeric="decimal" />
+
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/InputFields"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/editText"
+            android:text="V = " />
+
+        <TextView
+            android:id="@+id/textView3"
+            style="@style/InputFields"
+            android:layout_alignEnd="@+id/textView4"
+            android:layout_alignRight="@+id/textView4"
+            android:layout_alignTop="@+id/editText2"
+            android:text="R = " />
+
+        <EditText
+            android:id="@+id/editText2"
+            style="@style/InputFields"
+            android:layout_above="@+id/textView2"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="34dp"
+            android:ems="10"
+            android:hint="Resistance"
+            android:inputType="numberDecimal"
+            android:text="1"
+            android:numeric="decimal" />
+
+        <TextView
+            android:id="@+id/textView4"
+            style="@style/InputFields"
+            android:text="I = "
+            android:layout_alignBottom="@+id/imageView"
+            android:layout_toLeftOf="@+id/editText3"
+            android:layout_toStartOf="@+id/editText3"
+            android:layout_marginBottom="18dp" />
+
+        <EditText
+            android:id="@+id/editText3"
+            style="@style/InputFields"
+            android:ems="10"
+            android:hint="Current"
+            android:inputType="numberDecimal"
+            android:text="1"
+            android:layout_alignTop="@+id/textView4"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:numeric="decimal" />
 
     </RelativeLayout>
 </ScrollView>
