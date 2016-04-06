@@ -16,30 +16,21 @@ public class MainActivity extends AppCompatActivity {
     public void showOhmLaw(View view) {
         Intent intent = new Intent(this, TheOhmsLaw.class);
         startActivity(intent);
-
     }
 
     public void showVoltageDivider(View view) {
-        Intent intent = new Intent(this, VoltageDivider.class);
-        startActivity(intent);
-
+        startActivity(new Intent(this, VoltageDivider.class));
     }
 
     public void showCurrentDivider(View view) {
-        Intent intent = new Intent(this, CurrentDivider.class);
-        startActivity(intent);
-
+        startActivity(new Intent(this, CurrentDivider.class));
     }
 
     public void showResonant(View view) {
-        Intent intent = new Intent(this, ResonantCircuit.class);
-        startActivity(intent);
-
+        startActivity(new Intent(this, ResonantCircuit.class));
     }
 
     public void showColorCodes(View view) {
-        Intent intent = new Intent(this, ColorCode.class);
-        startActivity(intent);
-
+        startActivity(new Intent(this, ColorCode.class));
     }
 }

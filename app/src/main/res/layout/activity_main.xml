@@ -1,62 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.android.fivethings.MainActivity">
+    tools:context="com.example.android.fivethings.MainActivity"
+    android:background="@drawable/lightning">
 
-    <TextView
-        android:id="@+id/topic1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/topic"
-        android:textIsSelectable="false"
-        android:textSize="16sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/ohm_law_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="44dp"
-        android:onClick="showOhmLaw"
-        android:text="@string/ohm_law" />
+        <TextView
+            android:id="@+id/topic1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="16dp"
+            android:text="@string/topic"
+            android:textIsSelectable="false"
+            android:textSize="32sp"
+            android:textStyle="bold|italic"
+            android:textColor="#ffff00" />
 
-    <Button
-        android:id="@+id/voltage_divider_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="44dp"
-        android:onClick="showVoltageDivider"
-        android:text="@string/voltage_divider" />
+        <Button
+            android:id="@+id/ohm_law_button"
+            style="@style/Buttons"
+            android:onClick="showOhmLaw"
+            android:text="@string/ohm_law" />
 
-    <Button
-        android:id="@+id/current_divider_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="44dp"
-        android:onClick="showCurrentDivider"
-        android:text="@string/current_divider" />
+        <Button
+            android:id="@+id/voltage_divider_button"
+            style="@style/Buttons"
+            android:onClick="showVoltageDivider"
+            android:text="@string/voltage_divider" />
 
-    <Button
-        android:id="@+id/resonant_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="44dp"
-        android:onClick="showResonant"
-        android:text="@string/resonant_circuit" />
+        <Button
+            android:id="@+id/current_divider_button"
+            style="@style/Buttons"
+            android:onClick="showCurrentDivider"
+            android:text="@string/current_divider" />
 
-    <Button
-        android:id="@+id/codes_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="44dp"
-        android:onClick="showColorCodes"
-        android:text="@string/electronic_color_code" />
-</LinearLayout>
+        <Button
+            android:id="@+id/resonant_button"
+            style="@style/Buttons"
+            android:onClick="showResonant"
+            android:text="@string/resonant_circuit" />
+
+        <Button
+            android:id="@+id/codes_button"
+            style="@style/Buttons"
+            android:onClick="showColorCodes"
+            android:text="@string/electronic_color_code" />
+    </LinearLayout>
+
+</ScrollView>
