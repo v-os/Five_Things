@@ -36,5 +36,7 @@
     <string name="hintVoltage">Voltage</string>
     <string name="hintCurrent">Current</string>
     <string name="hintResistance">Resistance</string>
+    <string name="divByZero">Division by zero!</string>
+
 
 </resources>

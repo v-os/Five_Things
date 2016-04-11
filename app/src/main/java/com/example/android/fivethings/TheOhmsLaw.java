@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class TheOhmsLaw extends AppCompatActivity {
     int prevId;
@@ -29,7 +30,14 @@ public class TheOhmsLaw extends AppCompatActivity {
                 if (!hasFocus) {
                     if (((EditText) v).length() == 0) {
                         ((EditText) v).setText("0");
+                    } else {
+                        try {
+                            Double.parseDouble(((EditText) v).getText().toString());
+                        } catch (Exception e) {
+                            Toast.makeText(TheOhmsLaw.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
                     }
+
 //                    Log.v("ohm","v = " + editV.getText().toString());
 //                    Log.v("ohm","vID = " + editV.getId());
 //                    Log.v("ohm","i = " + editI.getText().toString());
@@ -39,34 +47,49 @@ public class TheOhmsLaw extends AppCompatActivity {
 //                    Log.v("ohm","thisID = " + v.getId());
 
                     Double res = Double.parseDouble(editR.getText().toString());
-                    switch (v.getId()) {
-                        case R.id.editText:
-                            if (prevId == R.id.editText2) {
-                                if (res != 0) {
-                                    editI.setText("" + Double.parseDouble(editV.getText().toString()) / res);
+                    try {
+                        switch (v.getId()) {
+                            case R.id.editText:
+                                if (prevId == R.id.editText2) {
+                                    Double current = Double.parseDouble(editV.getText().toString()) / res;
+                                    editI.setText("" + current);
+                                    if (current.isInfinite() || current.isNaN()) {
+                                        throw new ArithmeticException();
+                                    }
+                                } else {
+                                    res = Double.parseDouble(editV.getText().toString()) / Double.parseDouble(editI.getText().toString());
+                                    editR.setText("" + res);
+                                    if (res.isInfinite() || res.isNaN()) {
+                                        throw new ArithmeticException();
+                                    }
                                 }
-                            } else {
-                                editR.setText("" + Double.parseDouble(editV.getText().toString()) / Double.parseDouble(editI.getText().toString()));
-                            }
-                            break;
-                        case R.id.editText2:
-                            if (prevId == R.id.editText) {
-                                if (res != 0) {
-                                    editI.setText("" + Double.parseDouble(editV.getText().toString()) / res);
+                                break;
+                            case R.id.editText2:
+                                if (prevId == R.id.editText) {
+                                    Double current = Double.parseDouble(editV.getText().toString()) / res;
+                                    editI.setText("" + current);
+                                    if (current.isInfinite() || current.isNaN()) {
+                                        throw new ArithmeticException();
+                                    }
+                                } else {
+                                    editV.setText("" + Double.parseDouble(editI.getText().toString()) * res);
                                 }
-                            } else {
-                                editV.setText("" + Double.parseDouble(editI.getText().toString()) * res);
-                            }
-                            break;
-                        case R.id.editText3:
-                            if (prevId == R.id.editText) {
-                                editR.setText("" + Double.parseDouble(editV.getText().toString()) / Double.parseDouble(editI.getText().toString()));
-                            } else {
-                                editV.setText("" + Double.parseDouble(editI.getText().toString()) * res);
+                                break;
+                            case R.id.editText3:
+                                if (prevId == R.id.editText) {
+                                    res = Double.parseDouble(editV.getText().toString()) / Double.parseDouble(editI.getText().toString());
+                                    editR.setText("" + res);
+                                    if (res.isInfinite() || res.isNaN()) {
+                                        throw new ArithmeticException();
+                                    }
+                                } else {
+                                    editV.setText("" + Double.parseDouble(editI.getText().toString()) * res);
 
-                            }
+                                }
+                        }
+                    } catch (ArithmeticException e) {
+                        Toast.makeText(TheOhmsLaw.this, R.string.divByZero, Toast.LENGTH_SHORT).show();
                     }
-
                     prevId = v.getId();
                 }
             }
