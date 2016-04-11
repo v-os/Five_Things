@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Five Laws of Physics</string>
+    <string name="app_name">Laws of Physics</string>
     <string name="topic">Electricity Laws</string>
     <string name="ohm_law">The Ohm\'s Law</string>
     <string name="ohm_law_description"><b>Ohm\'s law</b> states that the current through a conductor between two points is directly proportional to the voltage across the two points. Introducing the constant of proportionality, the resistance, one arrives at the usual mathematical equation that describes this relationship:\n
@@ -33,5 +33,8 @@
     <string name="animation_description">
         Animated diagram showing the operation of a tuned circuit (LC circuit). The capacitor C stores energy in its electric field E and the inductor L stores energy in its magnetic field B <i>(<span style="color:green;">green</span>)</i>. This jerky animation shows "snapshots" of the circuit at progressive points in the oscillation. The oscillations are slowed down; in an actual tuned circuit the charge oscillates back and forth tens of thousands to billions of times per second.
     </string>
+    <string name="hintVoltage">Voltage</string>
+    <string name="hintCurrent">Current</string>
+    <string name="hintResistance">Resistance</string>
 
 </resources>
