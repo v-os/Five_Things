@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.android.fivethings.ResonantCircuit">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -12,9 +13,8 @@
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/resonant_circuit"
             android:adjustViewBounds="true"
-            />
+            android:src="@drawable/resonant_circuit" />
 
         <TextView
             android:id="@+id/textView"
@@ -22,9 +22,26 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/imageView"
             android:layout_margin="8dp"
-            android:textSize="16sp"
+            android:autoLink="web"
             android:text="@string/resonant_circuit_description"
-            android:autoLink="web" />
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/animation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView"
+            android:adjustViewBounds="true"
+            android:background="@drawable/tuned_circuit_animation" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/animation"
+            android:layout_margin="8dp"
+            android:autoLink="web"
+            android:text="@string/animation_description"
+            android:textSize="16sp" />
 
     </RelativeLayout>
 </ScrollView>

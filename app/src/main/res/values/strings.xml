@@ -30,5 +30,8 @@
         \nThe electronic color code was developed in the early 1920s by the Radio Manufacturers Association (now part of Electronic Industries Alliance (EIA)), and was published as EIA-RS-279. The current international standard is IEC 60062. published by International Electrotechnical Commission.
         \n\nRead more: <a href="https://en.wikipedia.org/wiki/Electronic_color_code">https://en.wikipedia.org/wiki/Electronic_color_code</a>\n
     </string>
+    <string name="animation_description">
+        Animated diagram showing the operation of a tuned circuit (LC circuit). The capacitor C stores energy in its electric field E and the inductor L stores energy in its magnetic field B <i>(<span style="color:green;">green</span>)</i>. This jerky animation shows "snapshots" of the circuit at progressive points in the oscillation. The oscillations are slowed down; in an actual tuned circuit the charge oscillates back and forth tens of thousands to billions of times per second.
+    </string>
 
 </resources>

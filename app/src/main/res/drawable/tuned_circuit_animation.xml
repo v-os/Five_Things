@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:id="@+id/selected"
+    android:oneshot="false"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/tuned_circuit_0_delay_0_6s" android:duration="1000" />
+    <item android:drawable="@drawable/tuned_circuit_1_delay_0_3s" android:duration="500" />
+    <item android:drawable="@drawable/tuned_circuit_2_delay_0_3s" android:duration="500" />
+    <item android:drawable="@drawable/tuned_circuit_3_delay_0_3s" android:duration="500" />
+    <item android:drawable="@drawable/tuned_circuit_4_delay_0_3s" android:duration="500" />
+    <item android:drawable="@drawable/tuned_circuit_5_delay_0_3s" android:duration="500" />
+    <item android:drawable="@drawable/tuned_circuit_6_delay_0_6s" android:duration="1000" />
+    <item android:drawable="@drawable/tuned_circuit_7_delay_0_3s" android:duration="500" />
+    <item android:drawable="@drawable/tuned_circuit_8_delay_0_3s" android:duration="500" />
+    <item android:drawable="@drawable/tuned_circuit_9_delay_0_3s" android:duration="500" />
+    <item android:drawable="@drawable/tuned_circuit_10_delay_0_3s" android:duration="500" />
+    <item android:drawable="@drawable/tuned_circuit_11_delay_0_3s" android:duration="500" />
+</animation-list>
