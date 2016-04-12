@@ -9,15 +9,15 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true">
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
-            android:src="@drawable/ohmlaw"
-            />
+            android:src="@drawable/ohmlaw" />
 
         <TextView
             android:id="@+id/textView"
@@ -29,64 +29,68 @@
             android:text="@string/ohm_law_description"
             android:textSize="16sp" />
 
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/InputFields"
+            android:layout_alignLeft="@id/imageView"
+            android:layout_alignStart="@id/imageView"
+            android:layout_marginTop="220dp"
+            android:text="V = " />
+
         <EditText
             android:id="@+id/editText"
             style="@style/InputFields"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="223dp"
+            android:layout_alignBottom="@+id/textView2"
+            android:layout_toEndOf="@+id/textView2"
             android:layout_toRightOf="@+id/textView2"
-            android:ems="10"
+            android:ems="5"
             android:hint="@string/hintVoltage"
             android:inputType="numberDecimal"
             android:text="1" />
 
         <TextView
-            android:id="@+id/textView2"
-            style="@style/InputFields"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignTop="@+id/editText"
-            android:text="V = " />
-
-        <TextView
             android:id="@+id/textView3"
             style="@style/InputFields"
-            android:layout_alignEnd="@+id/textView4"
-            android:layout_alignRight="@+id/textView4"
-            android:layout_alignTop="@+id/editText2"
+            android:layout_alignBottom="@+id/editText2"
+            android:layout_toLeftOf="@+id/editText2"
+            android:layout_toStartOf="@+id/editText2"
+            android:labelFor="@id/editText2"
             android:text="R = " />
 
         <EditText
             android:id="@+id/editText2"
             style="@style/InputFields"
-            android:layout_above="@+id/textView2"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginBottom="34dp"
-            android:ems="10"
+            android:layout_alignEnd="@id/imageView"
+            android:layout_alignRight="@id/imageView"
+            android:layout_alignTop="@id/imageView"
+            android:layout_marginTop="180dp"
+            android:ems="5"
             android:hint="@string/hintResistance"
             android:inputType="numberDecimal"
-            android:text="1"/>
+            android:text="1" />
 
         <TextView
             android:id="@+id/textView4"
             style="@style/InputFields"
-            android:text="I = "
-            android:layout_alignBottom="@+id/imageView"
+            android:layout_alignBottom="@+id/editText3"
             android:layout_toLeftOf="@+id/editText3"
             android:layout_toStartOf="@+id/editText3"
-            android:layout_marginBottom="18dp" />
+            android:labelFor="@id/editText3"
+            android:text="I = " />
 
         <EditText
             android:id="@+id/editText3"
             style="@style/InputFields"
-            android:ems="10"
+            android:layout_alignBottom="@id/imageView"
+            android:layout_alignRight="@id/imageView"
+            android:layout_marginBottom="18dp"
+            android:layout_marginRight="36dp"
+            android:ems="5"
             android:hint="@string/hintCurrent"
+            android:imeOptions="actionNext"
             android:inputType="numberDecimal"
-            android:text="1"
-            android:layout_alignTop="@+id/textView4"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:nextFocusForward="@id/editText2"
+            android:text="1" />
 
     </RelativeLayout>
 </ScrollView>
