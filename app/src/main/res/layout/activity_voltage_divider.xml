@@ -8,15 +8,15 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true">
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/resistive_divider"
             android:adjustViewBounds="true"
-            />
+            android:src="@drawable/resistive_divider" />
 
         <TextView
             android:id="@+id/textView"
@@ -24,9 +24,53 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/imageView"
             android:layout_margin="8dp"
-            android:textSize="16sp"
+            android:autoLink="web"
             android:text="@string/voltage_divider_description"
-            android:autoLink="web" />
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editTextR1"
+            style="@style/InputFields"
+            android:layout_alignRight="@id/imageView"
+            android:layout_alignTop="@id/imageView"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="140dp"
+            android:ems="5"
+            android:imeOptions="actionNext"
+            android:inputType="numberDecimal"
+            android:nextFocusForward="@+id/editTextR2" />
+
+        <EditText
+            android:id="@+id/editTextR2"
+            style="@style/InputFields"
+            android:layout_alignLeft="@id/editTextR1"
+            android:layout_alignStart="@id/editTextR1"
+            android:layout_below="@id/editTextR1"
+            android:layout_marginTop="150dp"
+            android:ems="5"
+            android:imeOptions="actionNext"
+            android:inputType="numberDecimal"
+            android:nextFocusForward="@+id/editTextVout" />
+
+        <EditText
+            android:id="@+id/editTextVin"
+            style="@style/InputFields"
+            android:layout_alignLeft="@id/imageView"
+            android:layout_alignTop="@id/imageView"
+            android:layout_marginLeft="94dp"
+            android:layout_marginTop="38dp"
+            android:ems="5"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/editTextVout"
+            style="@style/InputFields"
+            android:layout_alignRight="@id/imageView"
+            android:layout_alignTop="@id/imageView"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="256dp"
+            android:ems="5"
+            android:inputType="numberDecimal" />
 
     </RelativeLayout>
 </ScrollView>
