@@ -45,6 +45,7 @@ public class VoltageDivider extends AppCompatActivity {
                 if (!hasFocus) {
                     res1 = validateInput(((EditText) v));
                     calculateVout();
+                    prevId = ((EditText) v).getId();
                 }
             }
         });
@@ -55,6 +56,27 @@ public class VoltageDivider extends AppCompatActivity {
                 if (!hasFocus) {
                     res2 = validateInput(((EditText) v));
                     calculateVout();
+                    prevId = ((EditText) v).getId();
+                }
+            }
+        });
+
+        editVout.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (!hasFocus) {
+                    outV = validateInput(((EditText) v));
+                    try {
+                        if (editR1.getId() == prevId) {
+                            res2 = outV * res1 / (inV - outV);
+                            editR2.setText(nf.format(res2));
+                        } else {
+                            res1 = res2 * (inV - outV) / outV;
+                            editR1.setText(nf.format(res1));
+                        }
+                    } catch (ArithmeticException e) {
+                        Toast.makeText(VoltageDivider.this, R.string.divByZero, Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
         });
@@ -62,7 +84,6 @@ public class VoltageDivider extends AppCompatActivity {
     }
 
     protected double validateInput(EditText et) {
-        prevId = et.getId();
         if (et.length() == 0) {
             et.setText("0");
         } else {
